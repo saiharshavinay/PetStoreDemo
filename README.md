@@ -1,5 +1,5 @@
 # PetStoreDemo
 how to run the application <br>
-cd petstore
-mvn clean install
-Run PetstoreApplication file
+cd petstore <br>
+mvn clean install <br>
+Run PetstoreApplication file <br>
