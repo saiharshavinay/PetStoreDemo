@@ -27,12 +27,12 @@ public class Pet {
     @ManyToOne(fetch = FetchType.LAZY,optional = false)
     @JoinColumn(name = "category_id",nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    //@JsonIgnore
+    @JsonIgnore
     private Category category;
     @ManyToOne(fetch = FetchType.LAZY,optional = false)
     @JoinColumn(name = "tag_id",nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    //@JsonIgnore
+    @JsonIgnore
     private Tag tags;
     @Column(name="pet_name")
     private String name;

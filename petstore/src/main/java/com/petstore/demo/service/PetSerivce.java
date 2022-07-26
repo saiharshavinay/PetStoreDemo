@@ -158,4 +158,20 @@ public class PetSerivce {
         }
         return responseEntity;
     }
+
+    public ResponseEntity getPetbyStatus(String[] status) {
+        ResponseEntity responseEntity = new ResponseEntity();
+        try {
+        List<Pet> pets = petRepository.findByStatus(status);
+            if(pets == null || pets.size() == 0)
+                throw new Exception("Values Not Found");
+
+            responseEntity.setResponse(pets);
+            responseEntity.setStatus("200");
+            responseEntity.setStatusMessage("Data retrived for the status: "+ status);
+        }catch (Exception e){
+
+        }
+        return responseEntity;
+    }
 }

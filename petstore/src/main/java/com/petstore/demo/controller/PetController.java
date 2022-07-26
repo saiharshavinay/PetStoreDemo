@@ -34,6 +34,12 @@ public class PetController {
         return  petSerivce.getPet(id);
 
     }
+    @GetMapping("/pets/{status}")
+    public @ResponseBody  ResponseEntity getPet(@PathVariable String[] status){
+        ResponseEntity responseEntity = new ResponseEntity();
+        return  petSerivce.getPetbyStatus(status);
+
+    }
     @GetMapping("/pet")
     public @ResponseBody  ResponseEntity getAllPets(){
         ResponseEntity responseEntity = new ResponseEntity();
